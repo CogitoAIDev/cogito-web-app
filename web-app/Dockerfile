@@ -2,7 +2,7 @@ FROM node:21-alpine as build
 EXPOSE 3000
 WORKDIR /web-app
 COPY package.json .
-RUN npm install
+RUN node --max-old-space-size=1024 /usr/local/bin/npm install
 COPY . .
 RUN npm run build
 
