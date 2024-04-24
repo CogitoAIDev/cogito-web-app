@@ -11,6 +11,8 @@ services:
       - LETSENCRYPT_HOST=cogitodev.org
       - VIRTUAL_PORT=3000
       - PORT=3000
+    ports:
+      - 3000:3000
     restart: always
     networks:
       - reverse-proxy
