@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: [ 16.x ]
 
     steps:
     - uses: actions/checkout@v2
@@ -22,6 +22,9 @@ jobs:
 
     - name: Change directory
       run: cd web-app
+
+    - name: List files
+      run: ls -la
 
     - name: Install dependencies
       run: npm install
