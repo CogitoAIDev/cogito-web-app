@@ -1,0 +1,7 @@
+@use "./themes/dark.scss";
+@use "./themes/light.scss";
+@import "./breakpoints";
+
+.app {
+    height: 100%;
+}
